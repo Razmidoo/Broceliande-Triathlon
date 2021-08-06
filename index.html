@@ -60,30 +60,27 @@
                 <!-- Connexion Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Connexion</h2>
                 <!-- Input de connexion-->
-                <div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Tabs Titles -->
-
-    <!-- Icon -->
-    <div class="fadeIn first">
-      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
-    </div>
-
-    <!-- Login Form -->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
-    </form>
-
-    <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
-    </div>
-
-  </div>
-</div>
+                            <!-- email input-->
+                            <form method="post" action="login.php">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" name="email" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Adresse Email</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Password input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" name="password" id="password" type="password" data-sb-validations="required,email" />
+                                <label for="password">Mot de passe</label>
+                            </div>
+                     <!-- Remind Passowrd -->
+                    <div id="formFooter">
+                    <a class="underlineHover" href="#">Mot de passe oublié ?</a>
+                 </div>
+                 <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Connexion</button>
             </div>
+        </div>
+        </form>
         </section>
         <!-- About Section-->
         <section class="page-section bg-primary text-white mb-0" id="about">
@@ -127,7 +124,7 @@
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" id="name" type="text" placeholder="Nom/Prénom" data-sb-validations="required" />
                                 <label for="name">Nom/Prénom</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
@@ -140,13 +137,13 @@
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <input class="form-control" id="phone" type="tel" placeholder="060000000" data-sb-validations="required" />
                                 <label for="phone">numéro de téléphone</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" type="text" placeholder="Entrez votre message ici" style="height: 10rem" data-sb-validations="required"></textarea>
                                 <label for="message">Message</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
